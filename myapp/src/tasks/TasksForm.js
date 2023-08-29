@@ -62,16 +62,6 @@ export default function TasksForm(props) {
                         value={values.taskName}
                         onChange={handleInputChange}
                     />
-                    {/* <Subject
-                        onClick = { onClick }
-                        onChange = { handleInputChange }
-                    />
-                    <Priority
-                        name = "myPriority"
-                        label = "Priority"
-                        value = { values.myPriority }
-                        onChange = { handleInputChange }
-                    /> */}
                     <DatePicker
                         name="myDate"
                         label="Date"
@@ -94,20 +84,11 @@ export default function TasksForm(props) {
                 <OpenLayersMap onLocationSelected={handleLocationSelected} />
 
                 <div>
-                    <Button /*variant="contained" color="primary"*/ text="Create" type="submit" /*onClick={handleSubmit}*/ />
+                    <Button text="Create" type="submit"/>
 
                     <Button text='Reset' color='default' onClick={resetForm} />
                 </div>
             </Grid>
-
-            {/* <div>
-                <Button variant="contained" color="primary" onClick={handleSubmit}>
-                    Create
-                </Button>
-                <Button text='Reset' color='default' onClick={resetForm}>
-                    Reset
-                </Button>
-            </div> */}
         </Form>
     )
 }

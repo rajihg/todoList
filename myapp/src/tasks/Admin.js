@@ -1,9 +1,7 @@
-import React, { useState } from 'react'
+import React from 'react'
 import TasksForm from './TasksForm'
 import Popup from '../components/Popup';
-import { makeStyles, Paper, TableBody, TableRow, TableCell, Toolbar, InputAdornment } from '@material-ui/core';
-import * as taskService from '../services/taskService';
-import useCard from '../components/useCard';
+import { makeStyles, Paper, TableBody, TableRow, TableCell } from '@material-ui/core';
 import useTable from '../components/useTable';
 import ActionButton from '../components/ActionButton';
 import DeleteIcon from '@material-ui/icons/Delete';
@@ -51,11 +49,6 @@ export default function Admin() {
         filterFn,
         setFilterFn,
       } = useTaskContext();
-
-    // const [recordForEdit, setRecordForEdit] = useState(null)
-    // const [records, setRecords] = useState(taskService.getAllTasks())
-    // const [filterFn, setFilterFn] = useState({ fn: items => { return items; } })
-    // const [openPopup, setOpenPopup] = useState(false)
 
     function formatDate(date) {
         const options = { year: 'numeric', month: 'numeric', day: 'numeric' };
@@ -118,10 +111,8 @@ export default function Admin() {
                 className={classes.newButton}
                 onClick={() => { setOpenPopup(true); setRecordForEdit(null) }}
             />
-
             <div>
                 <DisplayMap tasks={records} />
-
             </div>
             <Popup
                 title="Task Form"
