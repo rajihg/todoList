@@ -32,9 +32,6 @@ const useStyles = makeStyles(theme => ({
             width: '80%',
             margin: theme.spacing(1)
         },
-        // '& > *': {
-        //     margin: theme.spacing(1),
-        //   },
     }
 }))
 

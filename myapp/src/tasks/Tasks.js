@@ -49,11 +49,6 @@ export default function Tasks() {
     setFilterFn,
   } = useTaskContext();
 
-  // const [openPopup, setOpenPopup] = useState(false);
-  // const [recordForEdit, setRecordForEdit] = useState(null);
-  // const [records, setRecords] = useState(taskService.getAllTasks());
-  // const [filterFn, setFilterFn] = useState({ fn: items => { return items; } });
-
   const {
     getTasks
   } = useCard(records, filterFn);
@@ -151,7 +146,6 @@ export default function Tasks() {
       <Popup
         title='New Task Form'
         openPopup={openPopup}
-        // className = { classes.newButton }
         setOpenPopup={setOpenPopup}
       >
         <TasksForm
